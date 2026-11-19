@@ -9,7 +9,7 @@ body {
   --elevation-background: #f3f3f3;
   --link-color: #006eb8;
   --font-family-primary: 'Roboto', Arial;
-  --handwriting-font: 'Homemade Apple', cursive;
+  --handwriting-font: 'Caderno', cursive;
   --primary-color: #1a73e8;
   --ink-color: #000f55;
   --label-color: #333;
@@ -37,6 +37,53 @@ body.dark {
 @font-face {
   font-family: 'Hindi_Font';
   src: url(../fonts/Hindi_Type.ttf);
+}
+
+/* Fontes humanizadas com suporte a ABNT2 (ver fonts/humanizadas/README.md) */
+@font-face {
+  font-family: 'Caderno';
+  src: url(../fonts/humanizadas/Caderno.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rascunho';
+  src: url(../fonts/humanizadas/Rascunho.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bilhete';
+  src: url(../fonts/humanizadas/Bilhete.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Recado';
+  src: url(../fonts/humanizadas/Recado.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Anotação';
+  src: url(../fonts/humanizadas/Anotacao.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lousa';
+  src: url(../fonts/humanizadas/Lousa.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Garrancho';
+  src: url(../fonts/humanizadas/Garrancho.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Diário';
+  src: url(../fonts/humanizadas/Diario.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cursiva BR';
+  src: url(../fonts/humanizadas/CursivaBR.woff2) format('woff2');
+  font-display: swap;
 }
 
 /* Default CSS Changes */
@@ -203,7 +250,9 @@ body.dark .github-corner {
   font-weight: bold;
 }
 
+/* Ativa a alternância das variantes de letra das fontes humanizadas */
 .page-a {
+  font-feature-settings: 'calt' 1;
   width: 400px;
   height: calc(11.7 * 400px / 8.3); /* A4 Ratio */
   background: #fff;

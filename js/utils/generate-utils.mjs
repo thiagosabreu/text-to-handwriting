@@ -9,10 +9,7 @@ function isFontErrory() {
   const currentHandwritingFont = document.body.style.getPropertyValue(
     '--handwriting-font'
   );
-  return (
-    currentHandwritingFont === '' ||
-    currentHandwritingFont.includes('Homemade Apple')
-  );
+  return currentHandwritingFont.includes('Homemade Apple');
 }
 
 function applyPaperStyles() {

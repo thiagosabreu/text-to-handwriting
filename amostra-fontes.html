@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Amostra das fontes</title>
+<link rel="stylesheet" href="css/index.css">
+<style>
+body { padding: 24px; background: #f4f1ea; font-family: sans-serif; }
+.card { background: #fff; margin: 0 0 14px; padding: 10px 18px 14px; border-radius: 6px; box-shadow: 0 1px 3px #0002;
+  background-image: linear-gradient(#b8c8e0 1px, transparent 1px); background-size: 100% 1.55em; background-position: 0 .45em; }
+.card h3 { font: 600 12px sans-serif; color: #999; margin: 0 0 4px; letter-spacing: .05em; text-transform: uppercase; }
+.t { font-size: 22px; line-height: 1.55em; color: #0b2a6b; font-feature-settings: 'calt' 1; }
+</style>
+</head>
+<body>
+<div id="list"></div>
+<script>
+const fonts = ['Caderno', 'Rascunho', 'Bilhete', 'Recado', 'Anotação', 'Lousa', 'Garrancho', 'Diário', 'Cursiva BR'];
+const txt = `Ação, coração, maçã e açúcar — avó, você, pôr, através, pinguim, à noite.<br>
+ÇÃO ÁÉÍÓÚ ÂÊÔ ÃÕ À ª º ° § ¹²³ £ ¢ ¬ « » @ # $ % & * ( ) [ ] { } / ? ; : | \\ “ ”<br>
+O carro passou pela rua assim: “Isso é assessoria? Sim, 100%!” — 2026`;
+document.getElementById('list').innerHTML = fonts.map(f =>
+  `<div class="card"><h3>${f}</h3><div class="t" style="font-family:'${f}'">${txt}</div></div>`).join('');
+</script>
+</body>
+</html>
